@@ -1,0 +1,46 @@
+:root {
+  /* COLORS */
+  --color-primary: #8c52ff;
+  --color-primary-light: #eee6ff;
+  --color-secondary: #545454;
+  --color-secondary-light: #f1f1ef;
+  --color--text: #000;
+  --color--shadow: #000;
+
+  /* FONTS */
+  --header-font: "Raleway", sans-serif;
+  --body-font: "Raleway", sans-serif;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2rem;
+  --normal-font-size: 1.7rem;
+  --small-font-size: 1.5rem;
+  --smaller-font-size: 1.3rem;
+
+  /* FONT WEIGHT */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* MARGINS */
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /* Z-INDEX */
+  --z-back: 1;
+  --z-normal: 10;
+  --z-front: 100;
+
+  /* BORDER-RADIUS */
+  --br-img: 2px;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
