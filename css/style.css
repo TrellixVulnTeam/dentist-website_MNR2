@@ -78,13 +78,6 @@ a,
 a:visited {
   text-decoration: none; }
 
-.anchor {
-  display: block;
-  height: 8rem;
-  position: absolute;
-  top: -8rem;
-  visibility: hidden; }
-
 .btn {
   display: block;
   width: 21rem;
@@ -146,14 +139,55 @@ a:visited {
   visibility: visible;
   bottom: 1rem; }
 
+.footer {
+  background-color: var(--color-primary);
+  padding: 5rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: center; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 4rem; }
+  .footer__logo {
+    width: 20rem;
+    height: auto; }
+  .footer__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+  .footer__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
+    margin-bottom: 4rem; }
+    .footer__list > *:not(:last-child) {
+      margin-right: 2rem; }
+  .footer__link {
+    text-decoration: none;
+    min-width: fit-content; }
+    .footer__link:link, .footer__link:visited {
+      color: var(--color-secondary-light); }
+    .footer__link:hover, .footer__link:active {
+      color: var(--color-secondary); }
+  .footer__copyright {
+    color: var(--color-secondary-light);
+    width: 50%;
+    text-align: center;
+    font-size: var(--small-font-size); }
+
 .header {
-  position: fixed;
   width: 100%;
   height: 10vh;
   margin: 0;
   width: 100%;
   background-color: var(--color-secondary-light);
   z-index: var(--z-front); }
+  .header__sticky {
+    position: fixed; }
 
 .nav {
   height: 100%;
@@ -181,7 +215,7 @@ a:visited {
         flex-direction: column;
         right: 0;
         top: 10vh;
-        height: 90vh;
+        height: 100vh;
         position: absolute;
         text-align: center;
         background-color: var(--color-primary);
@@ -238,7 +272,7 @@ a:visited {
   margin: 0;
   display: grid;
   grid-template-columns: 40% 1fr;
-  grid-template-rows: 100vh; }
+  grid-template-rows: 90vh; }
   @media only screen and (max-width: 50em) {
     .home {
       display: flex;
@@ -280,7 +314,7 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     width: auto;
-    padding: 10rem;
+    padding: 15rem;
     align-items: flex-start;
     z-index: var(--z-normal); }
     @media only screen and (max-width: 50em) {
@@ -308,7 +342,7 @@ a:visited {
 
 .about {
   position: relative;
-  height: fit-content;
+  height: 100rem;
   padding: 5rem;
   display: flex;
   justify-content: space-evenly;
@@ -316,6 +350,7 @@ a:visited {
   align-items: center; }
   @media only screen and (max-width: 50em) {
     .about {
+      height: fit-content;
       display: flex;
       flex-direction: row;
       justify-content: center; } }
@@ -351,11 +386,14 @@ a:visited {
 .services {
   position: relative;
   background-color: var(--color-primary-light);
-  height: fit-content;
+  height: 100rem;
   padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media only screen and (max-width: 50em) {
+    .services {
+      height: fit-content; } }
   .services__heading {
     color: var(--color-primary);
     font-size: var(--h1-font-size);
@@ -372,11 +410,10 @@ a:visited {
         grid-template-rows: repeat(4, 1fr);
         grid-gap: 5rem; } }
   .services__crd {
-    height: fit-content;
+    height: 40rem;
     border: 2px solid var(--color-primary);
     border-radius: 10px;
-    padding: 3rem;
-    min-height: 30rem; }
+    padding: 3rem; }
   .services__heading-crd {
     font-size: var(--h3-font-size);
     margin-bottom: 2rem;
@@ -390,7 +427,7 @@ a:visited {
 
 .patient {
   position: relative;
-  height: fit-content;
+  height: 100rem;
   width: 80%;
   padding: 5rem;
   display: flex;
@@ -400,6 +437,7 @@ a:visited {
   margin: 0 auto; }
   @media only screen and (max-width: 50em) {
     .patient {
+      height: fit-content;
       width: 100%; } }
   .patient__heading-box {
     display: flex;
@@ -464,11 +502,13 @@ a:visited {
     font-weight: var(--font-medium); }
 
 .team {
+  height: 100rem;
   position: relative;
   display: grid;
   grid-template-columns: 40% 60%; }
   @media only screen and (max-width: 50em) {
     .team {
+      height: fit-content;
       display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 60% 40%;
@@ -484,9 +524,8 @@ a:visited {
     margin: 4rem;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2); }
   .team__text-box {
-    padding: 5rem;
+    padding: 10rem;
     margin-bottom: 2rem;
-    margin-right: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -513,13 +552,14 @@ a:visited {
 
 .contact {
   position: relative;
-  height: fit-content;
+  height: 80rem;
   display: grid;
   grid-template-columns: 50% 1fr;
-  grid-template-rows: 60rem;
+  grid-template-rows: 1fr;
   align-items: center; }
   @media only screen and (max-width: 50em) {
     .contact {
+      height: fit-content;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 60% 40%; } }
@@ -560,43 +600,3 @@ a:visited {
     filter: grayscale(75%);
     width: 100%;
     height: 100%; }
-
-.footer {
-  background-color: var(--color-primary);
-  padding: 5rem;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  text-align: center; }
-  .footer__logo-box {
-    text-align: center;
-    margin-bottom: 4rem; }
-  .footer__logo {
-    width: 20rem;
-    height: auto; }
-  .footer__content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center; }
-  .footer__list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    flex-wrap: wrap;
-    margin-bottom: 4rem; }
-    .footer__list > *:not(:last-child) {
-      margin-right: 2rem; }
-  .footer__link {
-    text-decoration: none;
-    min-width: fit-content; }
-    .footer__link:link, .footer__link:visited {
-      color: var(--color-secondary-light); }
-    .footer__link:hover, .footer__link:active {
-      color: var(--color-secondary); }
-  .footer__copyright {
-    color: var(--color-secondary-light);
-    width: 50%;
-    text-align: center;
-    font-size: var(--small-font-size); }

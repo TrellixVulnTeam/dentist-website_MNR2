@@ -1,0 +1,121 @@
+// NAVIGATION
+.header {
+  width: 100%;
+  height: 10vh;
+  margin: 0;
+  width: 100%;
+  background-color: var(--color-secondary-light);
+  z-index: var(--z-front);
+
+  &__sticky {
+    position: fixed;
+  }
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &__logo {
+    height: 5rem;
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    z-index: var(--z-front);
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      right: 0;
+      top: 10vh;
+      height: 100vh;
+      position: absolute;
+      text-align: center;
+      background-color: var(--color-primary);
+      width: 100%;
+      transform: translateX(100%);
+      transition: all 0.5s ease-in;
+      font-size: var(--h3-font-size);
+    }
+  }
+
+  &__list-active {
+    transform: translateX(0);
+  }
+
+  &__item {
+    margin-right: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    transition: all 0.2s;
+    z-index: var(--z-front);
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+      padding: 3rem 0;
+    }
+  }
+
+  &__link:active,
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--color-primary);
+
+    @media only screen and (max-width: $bp-medium) {
+      color: var(--color-secondary-light);
+    }
+  }
+
+  &__link:hover {
+    color: var(--color-secondary);
+
+    @media only screen and (max-width: $bp-medium) {
+      color: var(--color-primary);
+      background-color: var(--color-primary-light);
+    }
+  }
+
+  &__btn {
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    width: 8rem;
+    height: 100%;
+    background-color: var(--color-primary);
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: var(--font-semi-bold);
+    color: white;
+    display: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}

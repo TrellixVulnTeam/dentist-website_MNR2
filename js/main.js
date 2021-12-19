@@ -21,5 +21,24 @@ const navSlide = () => {
     nav.classList.toggle("nav__list-active");
   });
 };
-
 navSlide();
+
+// STICKY NAVIGATION
+const header = document.querySelector(".header");
+const home = document.querySelector(".home");
+const headerHeight = header.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) header.classList.add("header__sticky");
+  else header.classList.remove("header__sticky");
+};
+
+const homeObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+
+homeObserver.observe(home);

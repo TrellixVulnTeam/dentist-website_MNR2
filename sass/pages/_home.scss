@@ -1,161 +1,10 @@
-// SCROLL TOP
-.scroll {
-  position: fixed;
-  right: 1rem;
-  bottom: -20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  background: var(--color-primary);
-  border-radius: 0.5rem;
-  z-index: var(--z-front);
-  transition: 0.4s;
-  visibility: hidden;
-
-  &__icon {
-    font-size: 4rem;
-    filter: invert(100%);
-    height: 4rem;
-  }
-}
-
-.scroll:hover {
-  background-color: var(--color-secondary);
-}
-
-// SHOW SCROLL TOP
-.show-scroll {
-  visibility: visible;
-  bottom: 1rem;
-}
-
-// NAVIGATION
-.header {
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  margin: 0;
-  width: 100%;
-  background-color: var(--color-secondary-light);
-  z-index: var(--z-front);
-}
-
-.nav {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
-  position: relative;
-
-  &__logo {
-    height: 5rem;
-    margin-right: auto;
-    margin-left: 1rem;
-  }
-
-  &__menu {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-  }
-
-  &__list {
-    display: flex;
-    z-index: var(--z-front);
-
-    @media only screen and (max-width: $bp-medium) {
-      flex-direction: column;
-      right: 0;
-      top: 10vh;
-      height: 90vh;
-      position: absolute;
-      text-align: center;
-      background-color: var(--color-primary);
-      width: 100%;
-      transform: translateX(100%);
-      transition: all 0.5s ease-in;
-      font-size: var(--h3-font-size);
-    }
-  }
-
-  &__list-active {
-    transform: translateX(0);
-  }
-
-  &__item {
-    margin-right: 3rem;
-
-    @media only screen and (max-width: $bp-medium) {
-      margin: 0;
-    }
-  }
-
-  &__link {
-    transition: all 0.2s;
-    z-index: var(--z-front);
-
-    @media only screen and (max-width: $bp-medium) {
-      display: block;
-      padding: 3rem 0;
-    }
-  }
-
-  &__link:active,
-  &__link:link,
-  &__link:visited {
-    text-decoration: none;
-    color: var(--color-primary);
-
-    @media only screen and (max-width: $bp-medium) {
-      color: var(--color-secondary-light);
-    }
-  }
-
-  &__link:hover {
-    color: var(--color-secondary);
-
-    @media only screen and (max-width: $bp-medium) {
-      color: var(--color-primary);
-      background-color: var(--color-primary-light);
-    }
-  }
-
-  &__btn {
-    @media only screen and (max-width: $bp-medium) {
-      display: none;
-    }
-  }
-
-  &__toggle {
-    width: 8rem;
-    height: 100%;
-    background-color: var(--color-primary);
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: var(--font-semi-bold);
-    color: white;
-    display: none;
-
-    @media only screen and (max-width: $bp-medium) {
-      display: flex;
-      cursor: pointer;
-    }
-  }
-}
-
 // HOME
 .home {
   position: relative;
   margin: 0;
   display: grid;
   grid-template-columns: 40% 1fr;
-  grid-template-rows: 100vh;
+  grid-template-rows: 90vh;
 
   @media only screen and (max-width: $bp-medium) {
     display: flex;
@@ -209,7 +58,7 @@
     flex-direction: column;
     justify-content: center;
     width: auto;
-    padding: 10rem;
+    padding: 15rem;
     align-items: flex-start;
     z-index: var(--z-normal);
 
@@ -247,7 +96,7 @@
 // ABOUT SECTION
 .about {
   position: relative;
-  height: fit-content;
+  height: 100rem;
   padding: 5rem;
   display: flex;
   justify-content: space-evenly;
@@ -255,6 +104,7 @@
   align-items: center;
 
   @media only screen and (max-width: $bp-medium) {
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -307,11 +157,15 @@
 .services {
   position: relative;
   background-color: var(--color-primary-light);
-  height: fit-content;
+  height: 100rem;
   padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: fit-content;
+  }
 
   &__heading {
     color: var(--color-primary);
@@ -333,11 +187,10 @@
   }
 
   &__crd {
-    height: fit-content;
+    height: 40rem;
     border: 2px solid var(--color-primary);
     border-radius: 10px;
     padding: 3rem;
-    min-height: 30rem;
   }
 
   &__heading-crd {
@@ -358,7 +211,7 @@
 // PATIENT SECTION
 .patient {
   position: relative;
-  height: fit-content;
+  height: 100rem;
   width: 80%;
   padding: 5rem;
   display: flex;
@@ -368,6 +221,7 @@
   margin: 0 auto;
 
   @media only screen and (max-width: $bp-medium) {
+    height: fit-content;
     width: 100%;
   }
 
@@ -454,11 +308,13 @@
 
 // TEAM
 .team {
+  height: 100rem;
   position: relative;
   display: grid;
   grid-template-columns: 40% 60%;
 
   @media only screen and (max-width: $bp-medium) {
+    height: fit-content;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 60% 40%;
@@ -480,9 +336,8 @@
   }
 
   &__text-box {
-    padding: 5rem;
+    padding: 10rem;
     margin-bottom: 2rem;
-    margin-right: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -523,13 +378,14 @@
 // CONTACT
 .contact {
   position: relative;
-  height: fit-content;
+  height: 80rem;
   display: grid;
   grid-template-columns: 50% 1fr;
-  grid-template-rows: 60rem;
+  grid-template-rows: 1fr;
   align-items: center;
 
   @media only screen and (max-width: $bp-medium) {
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 60% 40%;
@@ -589,66 +445,5 @@
     filter: grayscale(75%);
     width: 100%;
     height: 100%;
-  }
-}
-
-.footer {
-  background-color: var(--color-primary);
-  padding: 5rem;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  text-align: center;
-
-  &__logo-box {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  &__logo {
-    width: 20rem;
-    height: auto;
-  }
-
-  &__content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    flex-wrap: wrap;
-    margin-bottom: 4rem;
-
-    & > *:not(:last-child) {
-      margin-right: 2rem;
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    min-width: fit-content;
-
-    &:link,
-    &:visited {
-      color: var(--color-secondary-light);
-    }
-
-    &:hover,
-    &:active {
-      color: var(--color-secondary);
-    }
-  }
-
-  &__copyright {
-    color: var(--color-secondary-light);
-    width: 50%;
-    text-align: center;
-    font-size: var(--small-font-size);
   }
 }
