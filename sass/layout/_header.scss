@@ -6,6 +6,11 @@
   width: 100%;
   background-color: var(--color-secondary-light);
   z-index: var(--z-front);
+  transition: transform 1s, opacity 1s;
+
+  @media only screen and (max-width: $bp-medium) {
+    transition: none;
+  }
 
   &__sticky {
     position: fixed;
